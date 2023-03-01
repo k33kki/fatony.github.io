@@ -1,0 +1,185 @@
+{
+  "main": {
+    "type": "block",
+    "data": {
+      "blocks": {
+        "languageVersion": 0,
+        "blocks": [
+          {
+            "type": "scene_create_default_environment",
+            "id": "?O=q^}h]Q?IWgvqIa*3F",
+            "x": 10,
+            "y": 130,
+            "inputs": {
+              "OPTIONS": {
+                "shadow": {
+                  "type": "empty_object",
+                  "id": "(I;_L4JKx),pVi)P9F{c"
+                }
+              }
+            },
+            "next": {
+              "block": {
+                "type": "scene_assets_manager",
+                "id": "pM4SP#(2*dW:kI4nDF_G",
+                "extraState": {
+                  "enabledprogresscb": false
+                },
+                "inputs": {
+                  "LOADING_SCREEN": {
+                    "block": {
+                      "type": "scene_create_loading_screen",
+                      "id": "ozzE6[F)RRCQI4.VKoUH",
+                      "inputs": {
+                        "OPTIONS": {
+                          "shadow": {
+                            "type": "empty_object",
+                            "id": "#T4E$hD[h^JY;LOtHOmf"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "LOAD_ASSETS": {
+                    "block": {
+                      "type": "scene_create_loading_task",
+                      "id": "oCPd=/]A%rSL@%K?v|S4",
+                      "extraState": {
+                        "isStatement": true
+                      },
+                      "fields": {
+                        "METHOD": "add",
+                        "TYPE": "addMeshTask"
+                      },
+                      "inputs": {
+                        "ASSET_NAME": {
+                          "shadow": {
+                            "type": "text",
+                            "id": ".W[IhxST,d$yV%E7K?]Q",
+                            "fields": {
+                              "TEXT": "loadMesh"
+                            }
+                          }
+                        },
+                        "URL": {
+                          "shadow": {
+                            "type": "text",
+                            "id": "/%z;e[Xp*S^.b`~vGKsx",
+                            "fields": {
+                              "TEXT": "assets/scene/Sphere_Space.glb"
+                            }
+                          }
+                        }
+                      },
+                      "next": {
+                        "block": {
+                          "type": "light_properties_accessors",
+                          "id": "_sTh|=$XYPz20I+bP8L]",
+                          "extraState": {
+                            "isStatement": true,
+                            "isValueInput": true
+                          },
+                          "fields": {
+                            "METHOD": "set",
+                            "TYPE": "PointLightProperties",
+                            "KEY": "diffuse"
+                          },
+                          "inputs": {
+                            "OBJECT": {
+                              "block": {
+                                "type": "create_light",
+                                "id": ",=vo!OtcLUeizo$+U@Fg",
+                                "fields": {
+                                  "TYPE": "DirectionalLight"
+                                },
+                                "inputs": {
+                                  "NAME": {
+                                    "shadow": {
+                                      "type": "text",
+                                      "id": ";0Ow0w_UrX99T70kC#1t",
+                                      "fields": {
+                                        "TEXT": "directionallight"
+                                      }
+                                    }
+                                  },
+                                  "DIRECTION": {
+                                    "shadow": {
+                                      "type": "field_vector3",
+                                      "id": "F~sii_r8o2R7g#k;8%XU",
+                                      "fields": {
+                                        "X": 0,
+                                        "Y": -1,
+                                        "Z": 0
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "VALUE": {
+                              "shadow": {
+                                "type": "field_color3",
+                                "id": "N0cL1y#/Oo;4IcdM/[or",
+                                "fields": {
+                                  "R": 0,
+                                  "G": 0,
+                                  "B": 0
+                                }
+                              }
+                            }
+                          },
+                          "next": {
+                            "block": {
+                              "type": "light_properties_accessors",
+                              "id": ":3q]N^{eG9+@SR:|YckZ",
+                              "extraState": {
+                                "isStatement": true,
+                                "isValueInput": true
+                              },
+                              "fields": {
+                                "METHOD": "set",
+                                "TYPE": "PointLightProperties",
+                                "KEY": "intensity"
+                              },
+                              "inputs": {
+                                "VALUE": {
+                                  "shadow": {
+                                    "type": "math_number",
+                                    "id": "7OQ56@w?v2[qAP*kxv;:",
+                                    "fields": {
+                                      "NUM": 5
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "setting": {
+    "data": {
+      "gutterPosition": "58",
+      "openInspector": true,
+      "wideToolbox": true,
+      "modules": [
+        "babylon.js",
+        "pep.min.js",
+        "babylon.gridMaterial.min.js",
+        "tweakpane.min.js",
+        "babylon.gui.min.js",
+        "babylon.glTF2FileLoader.min.js"
+      ],
+      "glob": []
+    }
+  }
+}
