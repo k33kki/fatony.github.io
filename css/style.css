@@ -1,0 +1,37 @@
+.btn_class{
+    background-color: #eeeeee00;
+    background-image: url(../images/refresh.png);
+    transform: rotate(360deg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 24px;
+    text-align: center; 
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 16px;
+    right: 24px;
+    user-select: none;
+    -webkit-user-select: none;
+    border: none;
+    transition: 0.5s;
+}
+
+.btn_class:active{
+    background-color: #eeeeee00;
+    background-image: url(../images/refresh.png);
+    transform: rotate(0deg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 24px;
+    text-align: center; 
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 16px;
+    right: 24px;
+    user-select: none;
+    -webkit-user-select: none;
+    border: none;
+    transition: 0s;
+}
